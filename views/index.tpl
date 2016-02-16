@@ -10,16 +10,16 @@
   <meta name="author" content="">
 
   <title>Who's Home - {{ssid}}</title>
-  <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="{{ get_url('static', filename='favicon.png') }}">
 
   <!-- Bootstrap core CSS -->
-  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ get_url('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="/static/css/jumbotron-narrow.css" rel="stylesheet">
+  <link href="{{ get_url('static', filename='css/jumbotron-narrow.css') }}" rel="stylesheet">
 
   <!-- Font Awesome Implement -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ get_url('static', filename='css/font-awesome.min.css') }}">
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 
@@ -36,13 +36,13 @@
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <li role="presentation" class="active"><a href="/"><i class="fa fa-refresh"></i> Reload</a></li>
+          <li role="presentation" class="active"><a href="{{ get_url('index') }}"><i class="fa fa-refresh"></i> Reload</a></li>
         </ul>
       </nav>
-      <h3 class="text-muted"><img src="static/img/logo.png" alt="Who's Home" style="width:5%; height:auto;opacity: 0.5;margin:0;padding:0"/></h3>
+      <h3 class="text-muted"><img src="{{ get_url('static', filename='img/logo.png') }}" alt="Who's Home" style="width:5%; height:auto;opacity: 0.5;margin:0;padding:0"/></h3>
     </div>
     <div class="jumbotron">
-      <h1><img src="static/img/long_logo.png" alt="Who's Home" style="width: 99%; height: auto;"/></h1>
+      <h1><img src="{{ get_url('static', filename='img/long_logo.png') }}" alt="Who's Home" style="width: 99%; height: auto;"/></h1>
       <hr/>
       <p class="lead">This Website monitors your Wifi devices in the network {{ssid}}. It show's which Wifi device ( <i class="fa fa-mobile"></i> ) is connected to your router. This works thanks to the ping command which pings the ip-addresses of your devices.</p>
     </div>
@@ -82,7 +82,7 @@
       <p>Press "Reload" to update the data!</p>
     </div>
     <footer class="footer">
-      &copy; 2016 <a href="http://www.krewarts.de/" target="_blank">KrewArts</a> under the terms of the <a href="/static/LICENSE.txt">MIT License</a>
+      &copy; 2016 <a href="http://www.krewarts.de/" target="_blank">KrewArts</a> under the terms of the <a href="{{ get_url('static', filename='LICENSE.txt') }}">MIT License</a>
       <p class="pull-right"><a href="https://github.com/kRew94/Who-s-Home"><i class="fa fa-github"></i> Version 0.4.1</a></p>
     </footer>
 
